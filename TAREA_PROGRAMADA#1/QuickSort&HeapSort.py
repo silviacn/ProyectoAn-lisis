@@ -32,7 +32,7 @@ def main():
             messagebox.showwarning('Atención', 'Debe ingresar un número entero positivo.')
         else:            
             global contador
-            etiqueta2 = Label(ventana, text= "Ingrese el valor #"+str(contador)).place(x=20,y=170)
+            etiqueta2 = Label(ventana, text= "Ingrese el valor: ").place(x=20,y=170)
             txtElemento.pack(fill = X, padx=30, pady=70, ipadx=5, ipady=5)
             btnIngresar.place(x=60, y=250)
             btnResultado1.pack()
@@ -72,7 +72,6 @@ def main():
     def contar():
         global contador
         contador += 1
-        print(str(contador))
         
         
     def darResultadoQuickSort():
@@ -152,10 +151,11 @@ def main():
 
     #Reinicia la aplicación
     def resetAll():
-        ventana.destroy()
-        main()
         global contador
         contador = 1
+        ventana.destroy()
+        main()
+        
         
     #Centra la pantalla
     def centrar(ventana):
@@ -207,3 +207,4 @@ def main():
     ventana.mainloop()
     
 main()
+
